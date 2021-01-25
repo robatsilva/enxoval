@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="5dp"
+    android:gravity="center">
+    <Button
+        android:id="@+id/lst_view_produtos_btn_mais"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:textColor="#FFFFFF"
+        android:background="#800080"
+        android:text="+" />
+    <EditText
+        android:id="@+id/lst_view_produtos_txt_comprado"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:gravity="center"
+        android:textSize="20sp"
+        android:inputType="numberDecimal"
+        android:textStyle="bold"
+        android:maxLength="4"
+        android:digits="0123456789,"
+        />
+    <Button
+        android:id="@+id/lst_view_produtos_btn_menos"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:textColor="#FFFFFF"
+        android:background="#800080"
+        android:text="-"/>
+</LinearLayout>

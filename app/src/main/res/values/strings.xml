@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Enxoval</string>
+    <string name="title_activity_main">Enxoval</string>
+    <string name="action_settings">Settings</string>
+    <string name="config_bebe_label1">Organize o enchoval do seu bebê!</string>
+    <string name="config_bebe_label2">Informe o sexo do seu bebe:</string>
+    <string name="config_bebe_label3">Qual o clima previsto que o bebê irá nascer?</string>
+    <string name="config_bebe_label4">Se não souber será apresentado os produtos unissex e você pode alterar essa opção depois.</string>
+    <string name="config_bebe_menino">Menino</string>
+    <string name="config_bebe_menina">Menina</string>
+    <string name="config_bebe_proximo">Próximo</string>
+    <string name="config_bebe_nao_definido">Ainda não sei</string>
+    <string name="categorias_label1">Escolha uma categoria para ver os produtos</string>
+    <string name="produtos_label1">Categoria->Subcategoria</string>
+    <string name="lbl_ja_tenho">Já tenho: </string>
+    <string name="lst_view_produtos_lbl_produto">Produto</string>
+    <string name="lst_view_produtos_lbl_sugestao">Sugestão: </string>
+    <string name="lst_view_produtos_lbl_gasto">Valor unitário</string>
+    <string name="lst_view_produtos_lbl_nome">Nome:</string>
+    <string name="cancel">Cancelar:</string>
+    <string name="save">Salvar:</string>
+    <string name="configuracoes_lbl1">Alterar configurações</string>
+    <string name="configuracoes_sexo">Sexo do bebê</string>
+    <string name="configuracoes_mes">Clima em que o bebê irá nascer</string>
+    <string name="editar_produtos_activity_nome_produto">Nome:</string>
+    <string name="editar_produtos_activity_sugestao">Sugestão de quantidade</string>
+    <string name="editar_produtos_activity_label_1">Novo produto</string>
+
+    <string name="menu_item1">Listar o que já completei</string>
+    <string name="menu_item2">Listar o que falta completar</string>
+    <string name="menu_item6">Alterar configurações</string>
+    <string name="menu_item7">Listar todos os produtos</string>
+    <string name="menu_item8">Sobre</string>
+    <string name="menu_editar_confirmar">Confirmar</string>
+    <string name="menu_editar_cancelar">Cancelar</string>
+    <string name="menu_novo">Novo</string>
+    <string name="menu_facebook">Facebook</string>
+    <string name="info_txt_info">
+        Este aplicativo irá lhe ajudar a organizar o enxoval do seu bebê, sugerindo produtos que o bebê irá usar até o 3º mes de vida aproximadamente.
+       	\n\nOs produtos aqui apresentados levam em consideração bebês que nascem com média de 3 kg. 
+       	\n\nLeva em consideração também o clima, sendo que, geralmente, no Brasil temos:
+       	\n\nMeses frios: abril, maio, junho, julho, agosto e setembro. \n\nMeses quentes: janeiro, fevereiro, março, outubro, novembro e dezembro.
+       	\n\nAdeque seu enxoval à sua realidade.
+     </string>
+    <string name="info_btn_comecar">Começar</string>
+    <string name="title_activity_info">InfoActivity</string>
+    <string name="banner_ad_unit_id">ca-app-pub-8027025344367466/3021603033</string>
+
+    <string-array name="menu_poup_up_editar_produto">
+        <item>Editar quantidade que já tenho</item>
+        <item>Editar dados do produto</item>
+        <item>Deletar produto</item>
+    </string-array>
+    <string-array name="menu_poup_up_ad_produto">
+        <item>Enviar</item>
+        <item>Abrir no navegador</item>
+    </string-array>
+    <string name="title_activity_editar_produtos">EditarProdutosActivity</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="title_activity_tab_activity">tab_activity</string>
+    <string name="section_format">Hello World from section: %1$d</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="share">Compartilhar esta lista</string>
+    <string name="menuEnxoval_link_title">Envie o link para ver mais tarde ou abra agora</string>
+    <string name="menuEnxoval_share_product_title">Produto do app Enxoval</string>
+    <string name="menuEnxoval_share_product_title2">Enviar com</string>
+    <string name="menuEnxoval.dialog_back_title">Que tal um café para o desenvolvedor?</string>
+    <string name="menuEnxoval_dialog_back_msg">Adquira a versão Pro. Você pode compartilhar suas listas ;) e ainda livre-se dos anúncios! Assim o projeto pode melhorar e evoluir</string>
+    <string name="btn_maybe">Talvez depois</string>
+    <string name="menuEnxoval_dialog_back_btn_buy">Baixar R$ 3,99</string>
+    <string name="permission_title">Permissão necessária</string>
+    <string name="menuEnxoval_dialog_permission_msg">Para compartilhar, precisamos de sua permissão para armazenamento. Ative essa permissão nas configurações do aplicativo</string>
+    <string name="btn_no">Não</string>
+    <string name="btn_config">Ir para configurações</string>
+    <string name="error_product">Erro ao cadastrar os produtos</string>
+    <string name="error_query">Erro ao executar a consulta da query</string>
+    <string name="baseEnxoval_about_message">Desenvolvido por: Authentic Desenvolvimento - Robinson batista da silva   E-mail: authentic.desenvolvimento@gmail.com</string>
+    <string name="baseEnxoval_dialog_share_title">O que deseja fazer?</string>
+    <string name="baseEnxoval_dialog_share_message">Desbloquear esta função \n\nou \n\nBaixar a versão PRO para ter todas as funcionalidades desbloqueadas e livrar-se dos anúncios.</string>
+    <string name="baseEnxoval_dialog_add_message">Desbloquear esta função \n\nou \n\nBaixar a versão PRO para ter todas as funcionalidades desbloqueadas e livrar-se dos anúncios.</string>
+    <string name="baseEnxoval_dialog_btn_buy_now">Desbloquear por </string>
+    <string name="baseEnxoval_dialog_share_download">Baixar PRO por </string>
+    <string name="btn_not_now">Agora não</string>
+    <string name="loading">Carregando...</string>
+    <string name="verify_conection">Verifique sua conexão</string>
+    <string name="baseEnxoval_dialog_purchase_error_title">Opss :(</string>
+    <string name="baseEnxoval_dialog_purchase_error_msg">Se você está vendo essa mensagem é por que não foi possível compartilhar agora, tente novamente ou baixe a Versão PRO</string>
+    <string name="baseEnxoval_dialog_purchase_error_try_again">Tentar novamente</string>
+    <string name="pdf_title">Aplicativo Enxoval - Minha lista</string>
+    <string name="pdf_msg_tip">\t\tSugestão do app: </string>
+    <string name="pdf_file_name">enxoval.pdf</string>
+    <string name="pdf_share">Compartilhar minha lista</string>
+    <string name="permission_write_storage">Para compartilhar, precisamos de sua permissão para armazenamento. Ative essa permissão nas configurações do aplicativo</string>
+    <string name="permission_ok">Permitir</string>
+    <string name="error_init_elements">Erro ao iniciar os elementos</string>
+    <string name="recyclerView_dialog_menu_title">Escolha...</string>
+    <string name="recyclerView_edit_product">Editar produto</string>
+    <string name="atention">Atenção</string>
+    <string name="dialog_delete_product_msg">Confirma a exclusão do produto?</string>
+    <string name="bnt_yes">Sim</string>
+    <string name="dialog_delete_product_success">Produto excluído com sucesso!</string>
+    <string name="error_delete">Erro ao excluir o produto!</string>
+    <string name="error_edit_value">Erro ao editar o valor.</string>
+    <string name="RecyclerView_share_item_title">Envie o link para ver mais tarde ou abra agora</string>
+    <string name="recyclerView_share_item_subject">Produto do app Enxoval</string>
+    <string name="Tabs_tab_list">Lista de produtos</string>
+    <string name="tabs_tab_store">Estabelecimentos parceiros</string>
+    <string name="spinner_select">Selecione</string>
+    <string name="spinner_clima_calor">Calor</string>
+    <string name="spinner_clima_frio">Frio</string>
+    <string name="erro_select_gender_baby">Selecione uma opção para o sexo do bebê</string>
+    <string name="error_select_clima">Selecione o clima que o bebê irá nascer</string>
+    <string name="error_get_data">Erro ao processar os dados</string>
+    <string name="menu_product_complete">Produtos que já completei</string>
+    <string name="menu_product_incomplete">Produtos que faltam completar</string>
+    <string name="menu_all_products">Todos os produtos</string>
+    <string name="error_load_products">Erro ao carregar os produtos</string>
+    <string name="error_load_category">Erro ao processar a categoria</string>
+    <string name="products_title_all_category">Todas as categorias</string>
+    <string name="error_clima">Erro ao verificar o clima em que o bebê irá nascer</string>
+    <string name="error_config">Erro ao carrregar as configurações</string>
+    <string name="error_define_product">Erro ao definir o produto ou a categoria.</string>
+    <string name="error_empty_name">O nome não pode estar vazio.</string>
+    <string name="error_invalid_tip">Valor inválido para sugestão.</string>
+    <string name="error_invalid_have">Valor inválido para Já tenho.</string>
+    <string name="error_update_qtt">Erro ao atualizar a quantidade.</string>
+    <string name="success_add_product">Produto incluído com sucesso.</string>
+    <string name="error_add_product">Erro ao inserir o novo produto.</string>
+    <string name="success_edit_product">Produto editado com sucesso.</string>
+    <string name="error_edit_product">Erro ao atualizar o produto.</string>
+    <string name="icon_share">Este ícone indica que o estabelecimento oferece desconto pra quem usa o aplicativo</string>
+    <string name="procurar">Procurar...</string>
+
+</resources>

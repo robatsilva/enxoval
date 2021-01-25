@@ -1,0 +1,16 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/editar_menu_confirmar"        
+        android:title="@string/menu_editar_confirmar"
+        android:icon="@drawable/ic_action_accept"
+        android:showAsAction="ifRoom"
+        />
+    
+    <item
+        android:id="@+id/editar_menu_cancelar"        
+        android:title="@string/menu_editar_cancelar"
+        android:icon="@drawable/ic_action_cancel"
+        android:showAsAction="ifRoom"
+        />
+</menu>

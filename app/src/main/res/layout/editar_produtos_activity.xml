@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/linearlayout"
+    android:id="@+id/lly_editar_produtos">
+    <ScrollView
+        android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp">
+        <LinearLayout
+            style="@style/linearlayout">
+
+            <TextView
+                android:id="@+id/editar_produtos_activity_label_1"
+                android:text="@string/editar_produtos_activity_label_1"
+                style="@style/myTextview"
+                />
+
+            <View android:id="@+id/Divisor1"
+                android:layout_width="fill_parent"
+                android:layout_height="2dip"
+                android:layout_marginTop="15dp"
+                android:background="#A8A8A8" />
+
+            <TextView
+                style="@style/myTextview"
+                android:text="@string/editar_produtos_activity_nome_produto" />
+            <EditText
+                android:id="@+id/editar_produtos_activity_nome_produto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                />
+            <TextView
+                style="@style/myTextview"
+                android:text="@string/editar_produtos_activity_sugestao"
+                />
+            <EditText
+                android:id="@+id/editar_produtos_activity_sugestao"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:maxLength="4"
+                android:inputType="number"/>
+            <TextView
+                style="@style/myTextview"
+                android:text="@string/lbl_ja_tenho"
+                />
+            <EditText
+                android:id="@+id/editar_produtos_activity_ja_tenho"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal"
+                android:maxLength="4"
+                android:singleLine="true"
+                android:digits="0123456789,"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="15dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/editar_produtos_btn_cancelar"
+                    style="@style/button"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="2dp"
+                    android:layout_marginTop="0dp"
+                    android:text="@string/cancel"
+                    />
+                <Button
+                    android:id="@+id/editar_produtos_btn_salvar"
+                    style="@style/button"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginTop="0dp"
+                    android:text="@string/save"
+                    />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

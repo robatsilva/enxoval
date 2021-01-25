@@ -1,0 +1,179 @@
+CREATE TABLE categorias (
+	cate_id integer NOT NULL,
+	cate_descricao varchar(100),
+	cate_descricao_en varchar(100),
+	PRIMARY KEY (cate_id)
+);
+CREATE TABLE produtos (
+	prod_id integer NOT NULL,
+	prod_nome varchar(50) NOT NULL,
+	prod_nome_en varchar(50) NOT NULL,
+	prod_descricao varchar(500) NOT NULL,
+	prod_suca_id integer NOT NULL,
+	prod_sexo varchar(1) NOT NULL,
+	prod_calor integer NOT NULL,
+	prod_frio integer NOT NULL,
+	prod_qtd_comprada real NOT NULL DEFAULT 0,
+	PRIMARY KEY (prod_id)
+);
+
+CREATE TABLE sistema (
+	sexo varchar(1),
+	mes_nascimento integer(1),
+	status_config_sistema integer(1)
+);
+CREATE TABLE subcategorias (
+	suca_id integer NOT NULL,
+	suca_cate_id integer NOT NULL,
+	suca_ordem integer NOT NULL,
+	suca_descricao varchar(100) NOT NULL,
+	suca_descricao_en varchar(100) NOT NULL,
+	PRIMARY KEY (suca_id)
+);
+
+INSERT INTO sistema(sexo, mes_nascimento, status_config_sistema) VALUES (null, null, null);
+
+INSERT INTO categorias(cate_id, cate_descricao, cate_descricao_en) VALUES (1, 'Bebê', 'Baby');
+INSERT INTO categorias(cate_id, cate_descricao, cate_descricao_en) VALUES (2, 'Mamãe', 'Mom');
+INSERT INTO categorias(cate_id, cate_descricao, cate_descricao_en) VALUES (3, 'Casa', 'House');
+
+INSERT INTO subcategorias (suca_id, suca_cate_id, suca_ordem, suca_descricao, suca_descricao_en) VALUES (3, 1, 0, 'Acessório', 'Accessory');
+INSERT INTO subcategorias (suca_id, suca_cate_id, suca_ordem, suca_descricao, suca_descricao_en) VALUES (2, 1, 1, 'Alimentação', 'Food');
+INSERT INTO subcategorias (suca_id, suca_cate_id, suca_ordem, suca_descricao, suca_descricao_en) VALUES (4, 1, 2, 'Higiene', 'Hygiene');
+INSERT INTO subcategorias (suca_id, suca_cate_id, suca_ordem, suca_descricao, suca_descricao_en) VALUES (1, 1, 3, 'Passeio', 'Tour');
+INSERT INTO subcategorias (suca_id, suca_cate_id, suca_ordem, suca_descricao, suca_descricao_en) VALUES (5, 1, 4, 'Vestuário', 'Clothing');
+INSERT INTO subcategorias (suca_id, suca_cate_id, suca_ordem, suca_descricao, suca_descricao_en) VALUES (7, 2, 0, 'Acessório', 'Accessory');
+INSERT INTO subcategorias (suca_id, suca_cate_id, suca_ordem, suca_descricao, suca_descricao_en) VALUES (12, 2, 1, 'Higiene', 'Hygiene');
+INSERT INTO subcategorias (suca_id, suca_cate_id, suca_ordem, suca_descricao, suca_descricao_en) VALUES (6, 2, 2, 'Vestuário', 'Clothing');
+INSERT INTO subcategorias (suca_id, suca_cate_id, suca_ordem, suca_descricao, suca_descricao_en) VALUES (13, 3, 0, 'Cozinha', 'Kitchen');
+INSERT INTO subcategorias (suca_id, suca_cate_id, suca_ordem, suca_descricao, suca_descricao_en) VALUES (10, 3, 1, 'Lavanderia', 'Laundry');
+INSERT INTO subcategorias (suca_id, suca_cate_id, suca_ordem, suca_descricao, suca_descricao_en) VALUES (11, 3, 3, 'Outros', 'Others');
+INSERT INTO subcategorias (suca_id, suca_cate_id, suca_ordem, suca_descricao, suca_descricao_en) VALUES (9, 3, 2, 'Quarto', 'Bedroom');
+INSERT INTO subcategorias (suca_id, suca_cate_id, suca_ordem, suca_descricao, suca_descricao_en) VALUES (8, 4, 0, 'Acessório', 'Acessory');
+INSERT INTO subcategorias (suca_id, suca_cate_id, suca_ordem, suca_descricao, suca_descricao_en) VALUES (14, 2, 3, 'Curso', 'Course');
+
+INSERT INTO produtos (prod_id, prod_nome, prod_nome_en, prod_descricao, prod_suca_id, prod_sexo, prod_calor, prod_frio, prod_qtd_comprada) VALUES (141, 'Guia da Gravidez', 'Pregnancy Guide', '', 14, 'U', 1, 1, 0);
+INSERT INTO produtos (prod_id, prod_nome, prod_nome_en, prod_descricao, prod_suca_id, prod_sexo, prod_calor, prod_frio, prod_qtd_comprada) VALUES (140, 'Parto humanizado', 'Humanized birth', '', 14, 'U', 1, 1, 0);
+INSERT INTO produtos (prod_id, prod_nome, prod_nome_en, prod_descricao, prod_suca_id, prod_sexo, prod_calor, prod_frio, prod_qtd_comprada) VALUES (139, 'Nutrição para gestantes', 'Nutrition for pregnant', '', 14, 'U', 1, 1, 0);
+INSERT INTO produtos (prod_id, prod_nome, prod_nome_en, prod_descricao, prod_suca_id, prod_sexo, prod_calor, prod_frio, prod_qtd_comprada) VALUES (138, 'Tiara', 'Tiara', '', 5, 'F', 3, 3, 0);
+INSERT INTO produtos (prod_id, prod_nome, prod_nome_en, prod_descricao, prod_suca_id, prod_sexo, prod_calor, prod_frio, prod_qtd_comprada) VALUES (137, 'Necessaire', 'Necessaire', '', 7, 'U', 1, 1, 0);
+INSERT INTO produtos (prod_id, prod_nome, prod_nome_en, prod_descricao, prod_suca_id, prod_sexo, prod_calor, prod_frio, prod_qtd_comprada) VALUES (136, 'Chinelo de quarto', 'Slipper Room', '', 6, 'U', 1, 1, 0);
+INSERT INTO produtos (prod_id, prod_nome, prod_nome_en, prod_descricao, prod_suca_id, prod_sexo, prod_calor, prod_frio, prod_qtd_comprada) VALUES (135, 'Saia de berço', 'Cradle Skirt', '', 9, 'U', 1, 1, 0);
+INSERT INTO produtos (prod_id, prod_nome, prod_nome_en, prod_descricao, prod_suca_id, prod_sexo, prod_calor, prod_frio, prod_qtd_comprada) VALUES (134, 'Mosquiteiro para berço', 'Mosquito net for crib', '', 1, 'U', 1, 1, 0);
+INSERT INTO produtos (prod_id, prod_nome, prod_nome_en, prod_descricao, prod_suca_id, prod_sexo, prod_calor, prod_frio, prod_qtd_comprada) VALUES (133, 'Capa para bebê conforto', 'Cover to car seat', '', 1, 'U', 1, 1, 0);
+INSERT INTO produtos (prod_id, prod_nome, prod_nome_en, prod_descricao, prod_suca_id, prod_sexo, prod_calor, prod_frio, prod_qtd_comprada) VALUES (132, 'Capa para carrinho', 'Cover to stroller', '', 1, 'U', 1, 1, 0);
+INSERT INTO produtos (prod_id, prod_nome, prod_nome_en, prod_descricao, prod_suca_id, prod_sexo, prod_calor, prod_frio, prod_qtd_comprada) VALUES (130, 'Termômetro de banheira', 'Bathroom Termometer', '', 3, 'U', 1, 1, 0);
+INSERT INTO produtos (prod_id, prod_nome, prod_nome_en, prod_descricao, prod_suca_id, prod_sexo, prod_calor, prod_frio, prod_qtd_comprada) VALUES (129, 'Termômetro', 'Termometer', '', 3, 'U', 1, 1, 0);
+INSERT INTO produtos (prod_id, prod_nome, prod_nome_en, prod_descricao, prod_suca_id, prod_sexo, prod_calor, prod_frio, prod_qtd_comprada) VALUES (128, 'Protetor solar para carro', 'Car Sunscreen', '', 1, 'U', 1, 1, 0);
+INSERT INTO produtos (prod_id, prod_nome, prod_nome_en, prod_descricao, prod_suca_id, prod_sexo, prod_calor, prod_frio, prod_qtd_comprada) VALUES (127, 'Protetor de pescoço', 'Neck protector', '', 9, 'U', 1, 1, 0);
+INSERT INTO produtos (prod_id, prod_nome, prod_nome_en, prod_descricao, prod_suca_id, prod_sexo, prod_calor, prod_frio, prod_qtd_comprada) VALUES (126, 'Protetor de carrinho', 'Stroller Protector', '', 1, 'U', 1, 1, 0);
+INSERT INTO produtos (prod_id, prod_nome, prod_nome_en, prod_descricao, prod_suca_id, prod_sexo, prod_calor, prod_frio, prod_qtd_comprada) VALUES (125, 'Porta chupeta', 'Pacifier case', '', 3, 'U', 1, 1, 0);
+INSERT INTO produtos (prod_id, prod_nome, prod_nome_en, prod_descricao, prod_suca_id, prod_sexo, prod_calor, prod_frio, prod_qtd_comprada) VALUES (124, 'Porta mamadeira térmico', 'Baby bottle case', '', 1, 'U', 1, 1, 0);
+INSERT INTO produtos (prod_id, prod_nome, prod_nome_en, prod_descricao, prod_suca_id, prod_sexo, prod_calor, prod_frio, prod_qtd_comprada) VALUES (123, 'Frasqueira térmica', 'Thermos flask', '', 1, 'U', 1, 1, 0);
+INSERT INTO produtos (prod_id, prod_nome, prod_nome_en, prod_descricao, prod_suca_id, prod_sexo, prod_calor, prod_frio, prod_qtd_comprada) VALUES (122, 'Esterilizador', 'Sterilizer', '', 13, 'U', 1, 1, 0);
+INSERT INTO produtos (prod_id, prod_nome, prod_nome_en, prod_descricao, prod_suca_id, prod_sexo, prod_calor, prod_frio, prod_qtd_comprada) VALUES (121, 'Porta fraldas', 'Diaper case', '', 9, 'U', 1, 1, 0);
+INSERT INTO produtos (prod_id, prod_nome, prod_nome_en, prod_descricao, prod_suca_id, prod_sexo, prod_calor, prod_frio, prod_qtd_comprada) VALUES (120, 'Poltrona de amamentação', 'Breastfeeding armchair', '', 9, 'U', 1, 1, 0);
+INSERT INTO produtos (prod_id, prod_nome, prod_nome_en, prod_descricao, prod_suca_id, prod_sexo, prod_calor, prod_frio, prod_qtd_comprada) VALUES (119, 'Porta maternidade', 'Maternity case', '', 9, 'U', 1, 1, 0);
+INSERT INTO produtos (prod_id, prod_nome, prod_nome_en, prod_descricao, prod_suca_id, prod_sexo, prod_calor, prod_frio, prod_qtd_comprada) VALUES (118, 'Cômoda', 'Dresser', '', 9, 'U', 1, 1, 0);
+INSERT INTO produtos (prod_id, prod_nome, prod_nome_en, prod_descricao, prod_suca_id, prod_sexo, prod_calor, prod_frio, prod_qtd_comprada) VALUES (117, 'Babá eletrônica', 'Babysitting Electronics', '', 9, 'U', 1, 1, 0);
+INSERT INTO produtos (prod_id, prod_nome, prod_nome_en, prod_descricao, prod_suca_id, prod_sexo, prod_calor, prod_frio, prod_qtd_comprada) VALUES (116, 'Meia G', 'Sock L', '', 5, 'U', 6, 6, 0);
+INSERT INTO produtos (prod_id, prod_nome, prod_nome_en, prod_descricao, prod_suca_id, prod_sexo, prod_calor, prod_frio, prod_qtd_comprada) VALUES (115, 'Meia M', 'Sock M', '', 5, 'U', 6, 6, 0);
+INSERT INTO produtos (prod_id, prod_nome, prod_nome_en, prod_descricao, prod_suca_id, prod_sexo, prod_calor, prod_frio, prod_qtd_comprada) VALUES (114, 'Casaquinho G', 'Jacket L', '', 5, 'U', 4, 4, 0);
+INSERT INTO produtos (prod_id, prod_nome, prod_nome_en, prod_descricao, prod_suca_id, prod_sexo, prod_calor, prod_frio, prod_qtd_comprada) VALUES (113, 'Casaquinho M', 'Jacket M', '', 5, 'U', 4, 4, 0);
+INSERT INTO produtos (prod_id, prod_nome, prod_nome_en, prod_descricao, prod_suca_id, prod_sexo, prod_calor, prod_frio, prod_qtd_comprada) VALUES (112, 'Macacão comprido G', 'Overalls long L', '', 5, 'U', 10, 10, 0);
+INSERT INTO produtos (prod_id, prod_nome, prod_nome_en, prod_descricao, prod_suca_id, prod_sexo, prod_calor, prod_frio, prod_qtd_comprada) VALUES (111, 'Macacão comprido M', 'Overalls long M', '', 5, 'U', 10, 10, 0);
+INSERT INTO produtos (prod_id, prod_nome, prod_nome_en, prod_descricao, prod_suca_id, prod_sexo, prod_calor, prod_frio, prod_qtd_comprada) VALUES (110, 'Macacão curto G', 'Overalls short L', '', 5, 'U', 3, 3, 0);
+INSERT INTO produtos (prod_id, prod_nome, prod_nome_en, prod_descricao, prod_suca_id, prod_sexo, prod_calor, prod_frio, prod_qtd_comprada) VALUES (109, 'Macacão curto M', 'Overalls short M', '', 5, 'U', 3, 3, 0);
+INSERT INTO produtos (prod_id, prod_nome, prod_nome_en, prod_descricao, prod_suca_id, prod_sexo, prod_calor, prod_frio, prod_qtd_comprada) VALUES (108, 'Calça G', 'Pants L', '', 5, 'U', 10, 10, 0);
+INSERT INTO produtos (prod_id, prod_nome, prod_nome_en, prod_descricao, prod_suca_id, prod_sexo, prod_calor, prod_frio, prod_qtd_comprada) VALUES (107, 'Calça M', 'Pants M', '', 5, 'U', 10, 10, 0);
+INSERT INTO produtos (prod_id, prod_nome, prod_nome_en, prod_descricao, prod_suca_id, prod_sexo, prod_calor, prod_frio, prod_qtd_comprada) VALUES (106, 'Body de manga comprida G', 'Body long sleeve L', '', 5, 'U', 4, 7, 0);
+INSERT INTO produtos (prod_id, prod_nome, prod_nome_en, prod_descricao, prod_suca_id, prod_sexo, prod_calor, prod_frio, prod_qtd_comprada) VALUES (105, 'Body de manga comprida M', 'Body long sleeve M', '', 5, 'U', 4, 7, 0);
+INSERT INTO produtos (prod_id, prod_nome, prod_nome_en, prod_descricao, prod_suca_id, prod_sexo, prod_calor, prod_frio, prod_qtd_comprada) VALUES (104, 'Body de manga curta G', 'Body short sleeve L', '', 5, 'U', 7, 4, 0);
+INSERT INTO produtos (prod_id, prod_nome, prod_nome_en, prod_descricao, prod_suca_id, prod_sexo, prod_calor, prod_frio, prod_qtd_comprada) VALUES (103, 'Body de manga curta M', 'Body short sleeve M', '', 5, 'U', 7, 4, 0);
+INSERT INTO produtos (prod_id, prod_nome, prod_nome_en, prod_descricao, prod_suca_id, prod_sexo, prod_calor, prod_frio, prod_qtd_comprada) VALUES (100, 'Cinta pós operatório', 'Postoperative band', '', 6, 'U', 2, 2, 0);
+INSERT INTO produtos (prod_id, prod_nome, prod_nome_en, prod_descricao, prod_suca_id, prod_sexo, prod_calor, prod_frio, prod_qtd_comprada) VALUES (99, 'Pijama com abertura', 'Pajama with opening', '', 6, 'U', 3, 3, 0);
+INSERT INTO produtos (prod_id, prod_nome, prod_nome_en, prod_descricao, prod_suca_id, prod_sexo, prod_calor, prod_frio, prod_qtd_comprada) VALUES (98, 'Cesta de roupa', 'Basket of clothes', '', 10, 'U', 1, 1, 0);
+INSERT INTO produtos (prod_id, prod_nome, prod_nome_en, prod_descricao, prod_suca_id, prod_sexo, prod_calor, prod_frio, prod_qtd_comprada) VALUES (97, 'Aspirador nasal', 'Nasal aspirator', '', 4, 'U', 1, 1, 0);
+INSERT INTO produtos (prod_id, prod_nome, prod_nome_en, prod_descricao, prod_suca_id, prod_sexo, prod_calor, prod_frio, prod_qtd_comprada) VALUES (96, 'Travesseiro protetor para bebê não virar', 'Air pillow', '', 9, 'U', 1, 1, 0);
+INSERT INTO produtos (prod_id, prod_nome, prod_nome_en, prod_descricao, prod_suca_id, prod_sexo, prod_calor, prod_frio, prod_qtd_comprada) VALUES (95, 'Mordedor', 'Bitter', '', 3, 'U', 1, 1, 0);
+INSERT INTO produtos (prod_id, prod_nome, prod_nome_en, prod_descricao, prod_suca_id, prod_sexo, prod_calor, prod_frio, prod_qtd_comprada) VALUES (94, 'Sutiãs de amamentação', 'Breastfeeding bras', '', 6, 'U', 2, 2, 0);
+INSERT INTO produtos (prod_id, prod_nome, prod_nome_en, prod_descricao, prod_suca_id, prod_sexo, prod_calor, prod_frio, prod_qtd_comprada) VALUES (93, 'Pomada para os seios', 'Ointment for the breasts', '', 12, 'U', 1, 1, 0);
+INSERT INTO produtos (prod_id, prod_nome, prod_nome_en, prod_descricao, prod_suca_id, prod_sexo, prod_calor, prod_frio, prod_qtd_comprada) VALUES (92, 'Absorventes descartáveis para seios (pacote 30 unidades)', 'Disposable Breast Absorbents (package 30 units)', '', 12, 'U', 2, 2, 0);
+INSERT INTO produtos (prod_id, prod_nome, prod_nome_en, prod_descricao, prod_suca_id, prod_sexo, prod_calor, prod_frio, prod_qtd_comprada) VALUES (91, 'Absorventes para calcinha (pacote 8 unidades)', 'Absorbents for panties (pack 8 units)', '', 12, 'U', 3, 3, 0);
+INSERT INTO produtos (prod_id, prod_nome, prod_nome_en, prod_descricao, prod_suca_id, prod_sexo, prod_calor, prod_frio, prod_qtd_comprada) VALUES (90, 'Bombinha de tirar leite', 'Milk pump', '', 2, 'U', 1, 1, 0);
+INSERT INTO produtos (prod_id, prod_nome, prod_nome_en, prod_descricao, prod_suca_id, prod_sexo, prod_calor, prod_frio, prod_qtd_comprada) VALUES (89, 'Babador', 'Bib', '', 2, 'U', 3, 3, 0);
+INSERT INTO produtos (prod_id, prod_nome, prod_nome_en, prod_descricao, prod_suca_id, prod_sexo, prod_calor, prod_frio, prod_qtd_comprada) VALUES (88, 'Almofada para amamentação', 'Cushion for breastfeeding', '', 2, 'U', 1, 1, 0);
+INSERT INTO produtos (prod_id, prod_nome, prod_nome_en, prod_descricao, prod_suca_id, prod_sexo, prod_calor, prod_frio, prod_qtd_comprada) VALUES (87, 'Móbile para o berço', 'Mobile for crib', '', 9, 'U', 1, 1, 0);
+INSERT INTO produtos (prod_id, prod_nome, prod_nome_en, prod_descricao, prod_suca_id, prod_sexo, prod_calor, prod_frio, prod_qtd_comprada) VALUES (86, 'Abajur', 'Bedside lamp', '', 9, 'U', 1, 1, 0);
+INSERT INTO produtos (prod_id, prod_nome, prod_nome_en, prod_descricao, prod_suca_id, prod_sexo, prod_calor, prod_frio, prod_qtd_comprada) VALUES (85, 'Sabonete para bebê', 'Baby Soap', '', 4, 'U', 3, 3, 0);
+INSERT INTO produtos (prod_id, prod_nome, prod_nome_en, prod_descricao, prod_suca_id, prod_sexo, prod_calor, prod_frio, prod_qtd_comprada) VALUES (84, 'Cortador de unha', 'Nail cutter', '', 4, 'U', 1, 1, 0);
+INSERT INTO produtos (prod_id, prod_nome, prod_nome_en, prod_descricao, prod_suca_id, prod_sexo, prod_calor, prod_frio, prod_qtd_comprada) VALUES (83, 'Bolsa maternidade', 'Maternity Bag', '', 7, 'U', 1, 1, 0);
+INSERT INTO produtos (prod_id, prod_nome, prod_nome_en, prod_descricao, prod_suca_id, prod_sexo, prod_calor, prod_frio, prod_qtd_comprada) VALUES (82, 'Kit higiene (garrafa térmica e potes para guardar algodão e hastes flexíveis', 'Hygiene kit (thermos bottle and cotton storage pots and flexible rods', '', 4, 'U', 1, 1, 0);
+INSERT INTO produtos (prod_id, prod_nome, prod_nome_en, prod_descricao, prod_suca_id, prod_sexo, prod_calor, prod_frio, prod_qtd_comprada) VALUES (81, 'Trocador portátil', 'Diaper changer', '', 4, 'U', 1, 1, 0);
+INSERT INTO produtos (prod_id, prod_nome, prod_nome_en, prod_descricao, prod_suca_id, prod_sexo, prod_calor, prod_frio, prod_qtd_comprada) VALUES (80, 'Lixeira', 'Trash can', '', 11, 'U', 1, 1, 0);
+INSERT INTO produtos (prod_id, prod_nome, prod_nome_en, prod_descricao, prod_suca_id, prod_sexo, prod_calor, prod_frio, prod_qtd_comprada) VALUES (79, 'Lenços umedecidos (pacote 100 unidades)', 'Moist wipes (pack 100 units)', '', 4, 'U', 3, 3, 0);
+INSERT INTO produtos (prod_id, prod_nome, prod_nome_en, prod_descricao, prod_suca_id, prod_sexo, prod_calor, prod_frio, prod_qtd_comprada) VALUES (78, 'Fronha para travesseiro anti-refluxo', 'Anti-reflux pillowcase', '', 9, 'U', 6, 6, 0);
+INSERT INTO produtos (prod_id, prod_nome, prod_nome_en, prod_descricao, prod_suca_id, prod_sexo, prod_calor, prod_frio, prod_qtd_comprada) VALUES (77, 'Mosquiteiro para berço', 'Mosquito net for crib', '', 9, 'U', 1, 1, 0);
+INSERT INTO produtos (prod_id, prod_nome, prod_nome_en, prod_descricao, prod_suca_id, prod_sexo, prod_calor, prod_frio, prod_qtd_comprada) VALUES (76, 'Protetor para berço', 'Cradle protector', '', 9, 'U', 1, 1, 0);
+INSERT INTO produtos (prod_id, prod_nome, prod_nome_en, prod_descricao, prod_suca_id, prod_sexo, prod_calor, prod_frio, prod_qtd_comprada) VALUES (75, 'Edredon', 'Duvet', '', 9, 'U', 1, 1, 0);
+INSERT INTO produtos (prod_id, prod_nome, prod_nome_en, prod_descricao, prod_suca_id, prod_sexo, prod_calor, prod_frio, prod_qtd_comprada) VALUES (74, 'Cobertor anti-alérgico', 'Non-allergenic bedding available', '', 9, 'U', 3, 3, 0);
+INSERT INTO produtos (prod_id, prod_nome, prod_nome_en, prod_descricao, prod_suca_id, prod_sexo, prod_calor, prod_frio, prod_qtd_comprada) VALUES (73, 'Travesseiro anti-refluxo', 'Anti-reflux pillow', '', 9, 'U', 2, 2, 0);
+INSERT INTO produtos (prod_id, prod_nome, prod_nome_en, prod_descricao, prod_suca_id, prod_sexo, prod_calor, prod_frio, prod_qtd_comprada) VALUES (72, 'Lençol com elástico para berço', 'Sheet with elastic for crib', '', 9, 'U', 6, 6, 0);
+INSERT INTO produtos (prod_id, prod_nome, prod_nome_en, prod_descricao, prod_suca_id, prod_sexo, prod_calor, prod_frio, prod_qtd_comprada) VALUES (71, 'Berço', 'Crib', '', 9, 'U', 1, 1, 0);
+INSERT INTO produtos (prod_id, prod_nome, prod_nome_en, prod_descricao, prod_suca_id, prod_sexo, prod_calor, prod_frio, prod_qtd_comprada) VALUES (70, 'Talco (pote 200 gramas)', 'Talc (pot 200 grams)', '', 4, 'U', 3, 3, 0);
+INSERT INTO produtos (prod_id, prod_nome, prod_nome_en, prod_descricao, prod_suca_id, prod_sexo, prod_calor, prod_frio, prod_qtd_comprada) VALUES (69, 'Óleo para o corpo', 'Body oil', '', 4, 'U', 1, 1, 0);
+INSERT INTO produtos (prod_id, prod_nome, prod_nome_en, prod_descricao, prod_suca_id, prod_sexo, prod_calor, prod_frio, prod_qtd_comprada) VALUES (68, 'Hidratante para o corpo', 'Body Moisturizer', '', 4, 'U', 1, 1, 0);
+INSERT INTO produtos (prod_id, prod_nome, prod_nome_en, prod_descricao, prod_suca_id, prod_sexo, prod_calor, prod_frio, prod_qtd_comprada) VALUES (67, 'Jogo escova e pente', 'Set brush and comb', '', 4, 'U', 1, 1, 0);
+INSERT INTO produtos (prod_id, prod_nome, prod_nome_en, prod_descricao, prod_suca_id, prod_sexo, prod_calor, prod_frio, prod_qtd_comprada) VALUES (66, 'Condicionador para bebê', 'Conditioner for baby', '', 4, 'U', 2, 2, 0);
+INSERT INTO produtos (prod_id, prod_nome, prod_nome_en, prod_descricao, prod_suca_id, prod_sexo, prod_calor, prod_frio, prod_qtd_comprada) VALUES (65, 'Shampoo para bebê', 'Baby shampoo', '', 4, 'U', 2, 2, 0);
+INSERT INTO produtos (prod_id, prod_nome, prod_nome_en, prod_descricao, prod_suca_id, prod_sexo, prod_calor, prod_frio, prod_qtd_comprada) VALUES (64, 'Álcool 70% (pote 50 ml)', 'Alcohol 70% (pot 50 ml)', '', 4, 'U', 1, 1, 0);
+INSERT INTO produtos (prod_id, prod_nome, prod_nome_en, prod_descricao, prod_suca_id, prod_sexo, prod_calor, prod_frio, prod_qtd_comprada) VALUES (63, 'Pomada para assadura', 'Ointment for rash', '', 4, 'U', 3, 3, 0);
+INSERT INTO produtos (prod_id, prod_nome, prod_nome_en, prod_descricao, prod_suca_id, prod_sexo, prod_calor, prod_frio, prod_qtd_comprada) VALUES (62, 'Haste flexível de algodão (pacote 150 unidades)', 'Flexible Cotton Rod (150 pack)', '', 4, 'U', 3, 3, 0);
+INSERT INTO produtos (prod_id, prod_nome, prod_nome_en, prod_descricao, prod_suca_id, prod_sexo, prod_calor, prod_frio, prod_qtd_comprada) VALUES (61, 'Fralda descartável G (unidade)', 'Disposable diaper L (unit)', '', 4, 'U', 700, 700, 0);
+INSERT INTO produtos (prod_id, prod_nome, prod_nome_en, prod_descricao, prod_suca_id, prod_sexo, prod_calor, prod_frio, prod_qtd_comprada) VALUES (60, 'Fralda descartável M (unidade)', 'Disposable diaper M (unit)', '', 4, 'U', 500, 500, 0);
+INSERT INTO produtos (prod_id, prod_nome, prod_nome_en, prod_descricao, prod_suca_id, prod_sexo, prod_calor, prod_frio, prod_qtd_comprada) VALUES (59, 'Fralda descartável P (unidade)', 'Disposable diaper S (unit)', '', 4, 'U', 300, 300, 0);
+INSERT INTO produtos (prod_id, prod_nome, prod_nome_en, prod_descricao, prod_suca_id, prod_sexo, prod_calor, prod_frio, prod_qtd_comprada) VALUES (58, 'Fralda descartável RN (unidade)', 'Disposable diaper NB (unit)', '', 4, 'U', 100, 100, 0);
+INSERT INTO produtos (prod_id, prod_nome, prod_nome_en, prod_descricao, prod_suca_id, prod_sexo, prod_calor, prod_frio, prod_qtd_comprada) VALUES (57, 'Algodão (pacote 25 gramas)', 'Cotton (25 grams package)', '', 4, 'U', 30, 30, 0);
+INSERT INTO produtos (prod_id, prod_nome, prod_nome_en, prod_descricao, prod_suca_id, prod_sexo, prod_calor, prod_frio, prod_qtd_comprada) VALUES (56, 'Carrinho', 'Baby carriage', '', 1, 'U', 1, 1, 0);
+INSERT INTO produtos (prod_id, prod_nome, prod_nome_en, prod_descricao, prod_suca_id, prod_sexo, prod_calor, prod_frio, prod_qtd_comprada) VALUES (55, 'Bebê conforto', 'Baby comfort', '', 1, 'U', 1, 1, 0);
+INSERT INTO produtos (prod_id, prod_nome, prod_nome_en, prod_descricao, prod_suca_id, prod_sexo, prod_calor, prod_frio, prod_qtd_comprada) VALUES (54, 'Sling', 'Sling', '', 1, 'U', 1, 1, 0);
+INSERT INTO produtos (prod_id, prod_nome, prod_nome_en, prod_descricao, prod_suca_id, prod_sexo, prod_calor, prod_frio, prod_qtd_comprada) VALUES (53, 'Canguru', 'Baby carrier', '', 1, 'U', 1, 1, 0);
+INSERT INTO produtos (prod_id, prod_nome, prod_nome_en, prod_descricao, prod_suca_id, prod_sexo, prod_calor, prod_frio, prod_qtd_comprada) VALUES (52, 'Bolsa térmica para cólica', 'Thermal Colic Bag', '', 3, 'U', 1, 1, 0);
+INSERT INTO produtos (prod_id, prod_nome, prod_nome_en, prod_descricao, prod_suca_id, prod_sexo, prod_calor, prod_frio, prod_qtd_comprada) VALUES (51, 'Escova para lavar mamadeira', 'Bottle-brush', '', 3, 'U', 1, 1, 0);
+INSERT INTO produtos (prod_id, prod_nome, prod_nome_en, prod_descricao, prod_suca_id, prod_sexo, prod_calor, prod_frio, prod_qtd_comprada) VALUES (50, 'Prendedor de chupeta', 'Pacifier Clamp', '', 3, 'U', 1, 1, 0);
+INSERT INTO produtos (prod_id, prod_nome, prod_nome_en, prod_descricao, prod_suca_id, prod_sexo, prod_calor, prod_frio, prod_qtd_comprada) VALUES (49, 'Chupeta', 'Clamp', '', 3, 'U', 1, 1, 0);
+INSERT INTO produtos (prod_id, prod_nome, prod_nome_en, prod_descricao, prod_suca_id, prod_sexo, prod_calor, prod_frio, prod_qtd_comprada) VALUES (48, 'Mamadeira', 'Bottle', '', 2, 'U', 1, 1, 0);
+INSERT INTO produtos (prod_id, prod_nome, prod_nome_en, prod_descricao, prod_suca_id, prod_sexo, prod_calor, prod_frio, prod_qtd_comprada) VALUES (47, 'Chuquinha', 'Chuquinha', '', 3, 'U', 1, 1, 0);
+INSERT INTO produtos (prod_id, prod_nome, prod_nome_en, prod_descricao, prod_suca_id, prod_sexo, prod_calor, prod_frio, prod_qtd_comprada) VALUES (46, 'Bico de silicone', 'Silicone nipple', '', 3, 'U', 1, 1, 0);
+INSERT INTO produtos (prod_id, prod_nome, prod_nome_en, prod_descricao, prod_suca_id, prod_sexo, prod_calor, prod_frio, prod_qtd_comprada) VALUES (45, 'Concha para amamentação', 'Shell for breastfeeding', '', 7, 'U', 3, 3, 0);
+INSERT INTO produtos (prod_id, prod_nome, prod_nome_en, prod_descricao, prod_suca_id, prod_sexo, prod_calor, prod_frio, prod_qtd_comprada) VALUES (44, 'Rede para banheira', 'Bathtub netting', '', 4, 'U', 1, 1, 0);
+INSERT INTO produtos (prod_id, prod_nome, prod_nome_en, prod_descricao, prod_suca_id, prod_sexo, prod_calor, prod_frio, prod_qtd_comprada) VALUES (43, 'Saboneteira', 'Soap dish', '', 4, 'U', 1, 1, 0);
+INSERT INTO produtos (prod_id, prod_nome, prod_nome_en, prod_descricao, prod_suca_id, prod_sexo, prod_calor, prod_frio, prod_qtd_comprada) VALUES (42, 'Ofurô', 'Hot tub', '', 3, 'U', 1, 1, 0);
+INSERT INTO produtos (prod_id, prod_nome, prod_nome_en, prod_descricao, prod_suca_id, prod_sexo, prod_calor, prod_frio, prod_qtd_comprada) VALUES (41, 'Banheira', 'Bathtub', '', 4, 'U', 1, 1, 0);
+INSERT INTO produtos (prod_id, prod_nome, prod_nome_en, prod_descricao, prod_suca_id, prod_sexo, prod_calor, prod_frio, prod_qtd_comprada) VALUES (40, 'Pano de ombro', 'Shoulder Cloth', '', 7, 'U', 5, 5, 0);
+INSERT INTO produtos (prod_id, prod_nome, prod_nome_en, prod_descricao, prod_suca_id, prod_sexo, prod_calor, prod_frio, prod_qtd_comprada) VALUES (39, 'Cueiro', 'Cueiro', '', 9, 'U', 5, 5, 0);
+INSERT INTO produtos (prod_id, prod_nome, prod_nome_en, prod_descricao, prod_suca_id, prod_sexo, prod_calor, prod_frio, prod_qtd_comprada) VALUES (38, 'Toalha de banho com capuz', 'Hooded bath towel', '', 4, 'U', 5, 5, 0);
+INSERT INTO produtos (prod_id, prod_nome, prod_nome_en, prod_descricao, prod_suca_id, prod_sexo, prod_calor, prod_frio, prod_qtd_comprada) VALUES (37, 'Pano de boca', 'Cloth of mouth', '', 4, 'U', 10, 10, 0);
+INSERT INTO produtos (prod_id, prod_nome, prod_nome_en, prod_descricao, prod_suca_id, prod_sexo, prod_calor, prod_frio, prod_qtd_comprada) VALUES (36, 'Xale', 'Shawl', '', 9, 'U', 2, 2, 0);
+INSERT INTO produtos (prod_id, prod_nome, prod_nome_en, prod_descricao, prod_suca_id, prod_sexo, prod_calor, prod_frio, prod_qtd_comprada) VALUES (35, 'Fralda de pano', 'Cloth diaper', '', 4, 'U', 20, 20, 0);
+INSERT INTO produtos (prod_id, prod_nome, prod_nome_en, prod_descricao, prod_suca_id, prod_sexo, prod_calor, prod_frio, prod_qtd_comprada) VALUES (34, 'Touca', 'Cap', '', 5, 'U', 2, 5, 0);
+INSERT INTO produtos (prod_id, prod_nome, prod_nome_en, prod_descricao, prod_suca_id, prod_sexo, prod_calor, prod_frio, prod_qtd_comprada) VALUES (33, 'Luva', 'Glove', '', 5, 'U', 7, 7, 0);
+INSERT INTO produtos (prod_id, prod_nome, prod_nome_en, prod_descricao, prod_suca_id, prod_sexo, prod_calor, prod_frio, prod_qtd_comprada) VALUES (32, 'Chapéu', 'Hat', '', 5, 'U', 2, 2, 0);
+INSERT INTO produtos (prod_id, prod_nome, prod_nome_en, prod_descricao, prod_suca_id, prod_sexo, prod_calor, prod_frio, prod_qtd_comprada) VALUES (31, 'Saída de maternidade', 'Hospital bag', '', 5, 'U', 1, 1, 0);
+INSERT INTO produtos (prod_id, prod_nome, prod_nome_en, prod_descricao, prod_suca_id, prod_sexo, prod_calor, prod_frio, prod_qtd_comprada) VALUES (30, 'Sapatinho', 'Shoes', '', 5, 'U', 5, 5, 0);
+INSERT INTO produtos (prod_id, prod_nome, prod_nome_en, prod_descricao, prod_suca_id, prod_sexo, prod_calor, prod_frio, prod_qtd_comprada) VALUES (29, 'Meia P', 'Sock S', '', 5, 'U', 6, 6, 0);
+INSERT INTO produtos (prod_id, prod_nome, prod_nome_en, prod_descricao, prod_suca_id, prod_sexo, prod_calor, prod_frio, prod_qtd_comprada) VALUES (28, 'Meia RN', 'Sock NB', '', 5, 'U', 6, 6, 0);
+INSERT INTO produtos (prod_id, prod_nome, prod_nome_en, prod_descricao, prod_suca_id, prod_sexo, prod_calor, prod_frio, prod_qtd_comprada) VALUES (27, 'Casaquinho P', 'Coat S', '', 5, 'U', 4, 4, 0);
+INSERT INTO produtos (prod_id, prod_nome, prod_nome_en, prod_descricao, prod_suca_id, prod_sexo, prod_calor, prod_frio, prod_qtd_comprada) VALUES (26, 'Casaquinho RN', 'Coat NB', '', 5, 'U', 4, 4, 0);
+INSERT INTO produtos (prod_id, prod_nome, prod_nome_en, prod_descricao, prod_suca_id, prod_sexo, prod_calor, prod_frio, prod_qtd_comprada) VALUES (25, 'Macacão comprido P', 'Overalls long S', '', 5, 'U', 10, 10, 0);
+INSERT INTO produtos (prod_id, prod_nome, prod_nome_en, prod_descricao, prod_suca_id, prod_sexo, prod_calor, prod_frio, prod_qtd_comprada) VALUES (24, 'Macacão comprido RN', 'Overalls long NB', '', 5, 'U', 10, 10, 0);
+INSERT INTO produtos (prod_id, prod_nome, prod_nome_en, prod_descricao, prod_suca_id, prod_sexo, prod_calor, prod_frio, prod_qtd_comprada) VALUES (23, 'Macacão curto P', 'Overalls short S', '', 5, 'U', 3, 3, 0);
+INSERT INTO produtos (prod_id, prod_nome, prod_nome_en, prod_descricao, prod_suca_id, prod_sexo, prod_calor, prod_frio, prod_qtd_comprada) VALUES (22, 'Macacão curto RN', 'Overalls short NB', '', 5, 'U', 3, 3, 0);
+INSERT INTO produtos (prod_id, prod_nome, prod_nome_en, prod_descricao, prod_suca_id, prod_sexo, prod_calor, prod_frio, prod_qtd_comprada) VALUES (21, 'Calça P', 'Leg S', '', 5, 'U', 10, 10, 0);
+INSERT INTO produtos (prod_id, prod_nome, prod_nome_en, prod_descricao, prod_suca_id, prod_sexo, prod_calor, prod_frio, prod_qtd_comprada) VALUES (20, 'Calça RN', 'Leg NB', '', 5, 'U', 10, 10, 0);
+INSERT INTO produtos (prod_id, prod_nome, prod_nome_en, prod_descricao, prod_suca_id, prod_sexo, prod_calor, prod_frio, prod_qtd_comprada) VALUES (19, 'Body de manga comprida P', 'Long sleeve body S', '', 5, 'U', 4, 7, 0);
+INSERT INTO produtos (prod_id, prod_nome, prod_nome_en, prod_descricao, prod_suca_id, prod_sexo, prod_calor, prod_frio, prod_qtd_comprada) VALUES (18, 'Body de manga comprida RN', 'Long sleeve body NB', '', 5, 'U', 4, 7, 0);
+INSERT INTO produtos (prod_id, prod_nome, prod_nome_en, prod_descricao, prod_suca_id, prod_sexo, prod_calor, prod_frio, prod_qtd_comprada) VALUES (17, 'Body de manga curta P', 'Short sleeve body S', '', 5, 'U', 7, 4, 0);
+INSERT INTO produtos (prod_id, prod_nome, prod_nome_en, prod_descricao, prod_suca_id, prod_sexo, prod_calor, prod_frio, prod_qtd_comprada) VALUES (16, 'Body de manga curta RN', 'Short sleeve body NB', '', 5, 'U', 7, 4, 0);
+
+

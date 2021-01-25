@@ -1,0 +1,75 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent">
+    <LinearLayout
+        style="@style/linearlayout"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp">
+
+        <TextView
+            style="@style/myTextview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/config_bebe_label2" />
+
+        <RadioGroup
+            android:id="@+id/config_bebe_rdg_sexo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RadioButton
+                style="@style/button"
+                android:id="@+id/config_bebe_rdb_menino"
+                android:text="@string/config_bebe_menino"
+                android:layout_marginTop="15dp"
+                android:button="@null"
+                android:background="@drawable/checkbox_background"
+                android:textColor="#FFFFFF"
+                />
+            <RadioButton
+                style="@style/button"
+                android:id="@+id/config_bebe_rdb_menina"
+                android:text="@string/config_bebe_menina"
+                android:layout_marginTop="15dp"
+                android:button="@null"
+                android:background="@drawable/checkbox_background"
+                android:textColor="#FFFFFF"
+                />
+            <RadioButton
+                style="@style/button"
+                android:id="@+id/config_bebe_rdb_nao_definido"
+                android:text="@string/config_bebe_nao_definido"
+                android:layout_marginTop="15dp"
+                android:button="@null"
+                android:background="@drawable/checkbox_background"
+                android:textColor="#FFFFFF"
+                />
+
+        </RadioGroup>
+        <View      android:id="@+id/Divisor1"
+                    android:layout_width="fill_parent"
+                    android:layout_height="2dip"
+                    android:layout_marginTop="15dp"
+                    android:background="#A8A8A8" />
+
+        <TextView
+            style="@style/myTextview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="@string/config_bebe_label3" />
+
+        <Spinner
+            android:id="@+id/config_bebe_spn_nascimento"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            />
+
+        <Button
+            android:id="@+id/config_bebe_btn_proximo"
+            style="@style/button"
+            android:text="@string/config_bebe_proximo" />
+
+    </LinearLayout>
+</ScrollView>

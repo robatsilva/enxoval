@@ -1,0 +1,38 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/menu_novo"
+        android:title="@string/menu_novo"
+        android:icon="@drawable/ic_action_new"
+        app:showAsAction="always|withText"
+        />
+    <item
+        android:id="@+id/menu_item7"
+        android:title="@string/menu_item7"
+        />
+    <item
+        android:id="@+id/menu_item1"
+        android:title="@string/menu_item1"
+        />
+
+    <item
+        android:id="@+id/menu_item2"
+        android:title="@string/menu_item2"
+        />
+    <item
+        android:id="@+id/menu_item6"
+        android:title="@string/menu_item6"
+        />
+
+    <item
+        android:id="@+id/menu_item8"
+        android:title="@string/menu_item8"
+        />
+
+    <item
+        android:id="@+id/menu_facebook"
+        android:title="@string/menu_facebook"
+        android:icon="@drawable/facebook_ic_launcher"
+        app:showAsAction="withText"
+        />
+</menu>

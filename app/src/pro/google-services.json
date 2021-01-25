@@ -1,0 +1,38 @@
+{
+  "project_info": {
+    "project_number": "496580954271",
+    "project_id": "firebase-enxoval"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:496580954271:android:f3dd9c3d11fb3dfc",
+        "android_client_info": {
+          "package_name": "br.com.enxoval.pro"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBVcNIaOqdvHgiSwZbkwp9KuqAmlW_q2GY"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 2,
+          "analytics_property": {
+            "tracking_id": "UA-68285132-2"
+          }
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 1
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
